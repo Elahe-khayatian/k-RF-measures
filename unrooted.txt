@@ -1,0 +1,16 @@
+tree S
+v0:c,c v1:e
+v2:c,e v1:e
+v3:a,c v1:e
+v3:a,c v4:d
+v3:a,c v5:b
+v6:a,b,b v4:d
+v4:d v7:d,d
+tree T
+v0:c,c v1:e
+v2:c,e v1:e
+v1:e v3:a,c
+v3:a,c v4:d
+v3:a,c v5:b
+v6:b,b,b v4:d
+v7:d,d v4:d
