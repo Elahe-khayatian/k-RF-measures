@@ -3,7 +3,7 @@ def gettrees(tree_file):
   A=[[x for x in line.translate({ord(c): None for c in '\n'}).split(' ')]for line in tree_file]
   trees_index=[]
   for i in A:
-    if '#tree'in i:
+    if 'tree'in i:
         trees_index.append(A.index(i))
   trees=[]
   for i in range(len(trees_index)):
@@ -39,10 +39,10 @@ def getpartitions(trees, k):
         L_A_1_1=[]
         for v in tree_vertices:
           if dspl[e[0]][v]<dspl[e[1]][v] and dspl[e[0]][v]<k+1:
-            for a in v.split('_'):
+            for a in v.split(','):
                       L_A_1_1.append(a)
           if dspl[e[1]][v]<dspl[e[0]][v] and dspl[e[1]][v]<k+1:
-            for a in v.split('_'):
+            for a in v.split(','):
                       L_A_1_0.append(a)
         P.append([sorted(L_A_1_0), sorted(L_A_1_1)])  
      P_Total.append(P) 
